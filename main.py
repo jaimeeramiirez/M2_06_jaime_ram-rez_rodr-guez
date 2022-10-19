@@ -44,4 +44,20 @@ lee_numero()
 print("\n\n")
 
 def imc():
+  print("Vamos a calcular tu IMC o índice de masa corporal: ")
+  peso=int(input("Cuál es tu peso en kg? "))
+  altura= float(input("Cúal es tu altura en metros?\nPara la altura debes introducir dos decimales: "))
+  IMC= peso/(altura*altura)
+  print("Tu indice de masa corporal es de: ",IMC)
+  if IMC>=25.00:
+    print("Por lo tanto, tienes sobrepreso")
+  elif IMC>=30.00:
+    print("Tienes obesidad")
+  elif IMC<18.50:
+    print("Pesas demasiado poco")
+  else:
+    print("Tu peso es normal")
+
+  return imc
+imc()
   
