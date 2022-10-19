@@ -6,7 +6,7 @@ import math
 print(math.pi)
 print("\n")
 
-
+#Creamos la fución area_circulo, creamos la variable radio con un "float(input..." para poder introducir valores con decimales. Por último usamos la fórmula del área del círculo para resolver el problema.
 def area_cirulo():
   radio=float(input("Introduce el radio del círculo: "))
   area_circulo=(math.pi*(radio*radio))
