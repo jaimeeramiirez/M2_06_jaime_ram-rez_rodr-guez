@@ -18,6 +18,7 @@ print("\n\n")
 
 #Creamos la función lee_numero, dentro de la fución, le diremos al usuario que introduzca tres números que se imprimirán por pantalla en una tabla. Dentro de la función número crearemos una función llamada "mayor" que nos buscará el numero mayor de los tres introducidos. Para ellos usaremos dos condicionales que nos parametrizan la función. Por último, imprimiremos por pantalla el numero mayor.
 def lee_numero():
+  print("Introduce tres números diferentes\n")
   num1=float(input("Introduzca el primer número: "))
   num2=float(input("Introduzca el segundo número: "))
   num3=float(input("Introduzca el tercer número: "))
@@ -29,34 +30,37 @@ def lee_numero():
       num_mayor=num1
     elif num2>num1 and num2>num3:
       num_mayor=num2
-    else:
+    elif num3>num1 and num3>num2:
       num_mayor=num3
-    print("El número más grande es:",(num_mayor))
+    elif num1==num2==num3:
+      print("ERROR")
+      
+    print("El número más grande es: ", num_mayor)
     return mayor
-    
-
   mayor()
 
 lee_numero()
 
 
+
 #EJERCICIO 3
 print("\n\n")
 
+#
 def imc():
   print("Vamos a calcular tu IMC o índice de masa corporal: ")
   peso=int(input("Cuál es tu peso en kg? "))
   altura= float(input("Cúal es tu altura en metros?\nPara la altura debes introducir dos decimales: "))
   IMC= peso/(altura*altura)
   print("Tu indice de masa corporal es de: ",IMC)
-  if IMC>=25.00:
+  if (30<=IMC>=25.00):
     print("Por lo tanto, tienes sobrepreso")
   elif IMC>=30.00:
-    print("Tienes obesidad")
+    print("Por lo tanto, tienes obesidad")
   elif IMC<18.50:
-    print("Pesas demasiado poco")
+    print("Por lo tanto, pesas demasiado poco")
   else:
-    print("Tu peso es normal")
+    print("Por lo tanto, tu peso es normal")
 
   return imc
 imc()
